@@ -1,1 +1,9 @@
-spring.application.name=spring_boot_project
+spring:
+  application:
+    name: spring_boot_project
+  output:
+    ansi:
+      enabled: ALWAYS
+  devtools:
+    restart:
+      enabled: true
