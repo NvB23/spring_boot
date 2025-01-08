@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+  <configuration default="false" name="Execute" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.naum.spring_boot_project.Startup" />
     <module name="spring_boot_project" />
     <method v="2">

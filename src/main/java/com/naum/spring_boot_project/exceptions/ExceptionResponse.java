@@ -1,10 +1,12 @@
 package com.naum.spring_boot_project.exceptions;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
 public class ExceptionResponse implements Serializable {
-    private static long serialVersionUID = 1L;
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private Date timestamp;
     private String message;
