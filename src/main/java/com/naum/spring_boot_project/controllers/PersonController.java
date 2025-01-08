@@ -1,7 +1,6 @@
 package com.naum.spring_boot_project.controllers;
 
-
-import com.naum.spring_boot_project.models.Person;
+import com.naum.spring_boot_project.data.vo.v1.PersonVO;
 import com.naum.spring_boot_project.services.PersonServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -20,13 +19,13 @@ public class PersonController {
     // private PersonServices personServices = new PersonServices;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Person> findAll()
+    public List<PersonVO> findAll()
     {
         return personServices.findAll();
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person findByID(
+    public PersonVO findByID(
             @PathVariable(value = "id") Long id
     )
     {
@@ -34,16 +33,16 @@ public class PersonController {
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person create(
-            @RequestBody Person person
+    public PersonVO create(
+            @RequestBody PersonVO person
     )
     {
         return personServices.save(person);
     }
 
     @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person update(
-            @RequestBody Person person
+    public PersonVO update(
+            @RequestBody PersonVO person
     )
     {
         return personServices.update(person);
