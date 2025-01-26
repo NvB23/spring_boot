@@ -1,4 +1,4 @@
-package com.naum.spring_boot_project.data.vo.v1;
+package com.naum.spring_boot_project.data.dto.v1;
 
 
 import java.io.Serial;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 
-public class PersonVO implements Serializable {
+public class PersonDTO implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -21,7 +21,7 @@ public class PersonVO implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        PersonVO person = (PersonVO) o;
+        PersonDTO person = (PersonDTO) o;
         return Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(address, person.address) && Objects.equals(gender, person.gender);
     }
 
@@ -31,7 +31,7 @@ public class PersonVO implements Serializable {
     }
 
 
-    public PersonVO() {}
+    public PersonDTO() {}
 
     public String getLastName() {
         return lastName;
